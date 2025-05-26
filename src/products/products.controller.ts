@@ -39,15 +39,16 @@ export class ProductsController {
     // }
    
   }
+  @Delete(':id')
+  removeProduct() {
+    return 'This action removes a product';
+  }
+  
   @Patch(':id')
   patchProduct(
     @Body() body: any,
     @Param('id') id: string
   ) {
     return 'This action updates a product';
-  }
-  @Delete(':id')
-  removeProduct() {
-    return 'This action removes a product';
   }
 }
